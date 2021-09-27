@@ -11,11 +11,10 @@ const Wrapper = styled.section`
 `;
 
 const SectionWrapper = ({ children, setSectionIndex, index }) => {
-  const [elem, view] = useInView({ threshold: 0.2 });
+  const [elem, view] = useInView({ threshold: 0.4 });
 
   useEffect(() => {
     if (view) {
-      console.log(view);
       setSectionIndex(index);
     }
   }, [view]);

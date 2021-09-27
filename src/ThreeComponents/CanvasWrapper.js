@@ -12,17 +12,17 @@ extend({ OrbitControls });
 
 const CameraControls = () => {
   useFrame(({ camera, scene }) => {
-    camera.position.lerp(threeState.cameraPos, 0.1);
-    scene.orbitControls.target.lerp(threeState.target, 0.1);
+    camera.position.lerp(threeState.cameraPos, 0.04);
+    scene.orbitControls.target.lerp(threeState.target, 0.04);
     scene.orbitControls.update();
-    const diff = camera.position.clone().sub(threeState.cameraPos).length();
-    if (diff < 0.1) threeState.shoudUpdate = false;
+    // const diff = camera.position.clone().sub(threeState.cameraPos).length();
+    // if (diff < 0.0001) threeState.shoudUpdate = false;
   });
 
   return null;
 };
 
-const CanvasWrapper = ({ sectionIndex }) => {
+const CanvasWrapper = () => {
   return (
     <>
       <StyledCanvas camera={{ position: threeState.cameraPos }}>
@@ -50,6 +50,7 @@ const StyledCanvas = styled(Canvas)`
   height: 100vh;
   top: 0;
   left: 0;
+  z-index: -1;
 `;
 
 export default CanvasWrapper;

@@ -1,6 +1,8 @@
 import { ISlideConfig, PageSlides, SlideParallaxType } from 'react-page-slides';
 import Home from './Home/Home';
-import Home2 from './Home2/Home2';
+import Display from './Display/Display';
+import Camera from './Camera/Camera';
+import Battery from './Battery/Battery';
 
 const AllSlides = ({ setSectionIndex, sectionIndex }) => {
   const slides: ISlideConfig[] = [
@@ -8,10 +10,13 @@ const AllSlides = ({ setSectionIndex, sectionIndex }) => {
       content: <Home setSectionIndex={setSectionIndex} />,
     },
     {
-      content: <Home2 setSectionIndex={setSectionIndex} />,
+      content: <Display setSectionIndex={setSectionIndex} />,
     },
     {
-      content: <Home setSectionIndex={setSectionIndex} />,
+      content: <Camera setSectionIndex={setSectionIndex} />,
+    },
+    {
+      content: <Battery setSectionIndex={setSectionIndex} />,
     },
   ];
   return (
