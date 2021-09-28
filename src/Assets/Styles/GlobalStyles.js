@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Work Sans', sans-serif;
+        font-weight: 700;
     }
     body{
         color: ${({ theme }) => theme.colors.black};

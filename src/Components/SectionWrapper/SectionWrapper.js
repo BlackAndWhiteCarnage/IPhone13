@@ -13,7 +13,7 @@ const Wrapper = styled.section`
 `;
 
 const SectionWrapper = ({ children, setSectionIndex, index, className }) => {
-  const [elem, view] = useInView({ threshold: 0.5 });
+  const [elem, view] = useInView({ threshold: 0.2 });
 
   useEffect(() => {
     if (view) {

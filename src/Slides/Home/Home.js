@@ -10,17 +10,7 @@ const Home = ({ setSectionIndex, sectionIndex }) => {
   return (
     <>
       <SectionWrapper setSectionIndex={setSectionIndex} index={0}>
-        <Wrapper variants={templateAnim} animate={controls} initial='hidden' ref={element}>
-          <Part className='right'>
-            <Letter variants={letterAnim}>1</Letter>
-            <Letter variants={letterAnim}>3</Letter>
-          </Part>
-          <Part className='left'>
-            <Letter variants={letterAnim}>P</Letter>
-            <Letter variants={letterAnim}>r</Letter>
-            <Letter variants={letterAnim}>o</Letter>
-          </Part>
-        </Wrapper>
+        <Wrapper variants={templateAnim} animate={controls} initial='hidden' ref={element}></Wrapper>
       </SectionWrapper>
     </>
   );

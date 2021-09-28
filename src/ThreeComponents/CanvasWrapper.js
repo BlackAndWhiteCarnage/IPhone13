@@ -3,7 +3,6 @@ import { Canvas } from '@react-three/fiber';
 import styled from 'styled-components';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { extend, useThree, useLoader, useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
 import Lights from './Lights';
 import Orbit from './Orbit';
 import IphoneModel from './IphoneModel';
@@ -33,6 +32,11 @@ const CanvasWrapper = ({ sectionIndex }) => {
 
   return (
     <StyledCanvasWrapper>
+      <HomeHeader className={sectionIndex === 0 && 'show'}>
+        {['1', '3'].map((letter) => (
+          <Letter>{letter}</Letter>
+        ))}
+      </HomeHeader>
       <CanvasAndHeadersWrapper className={returnWrapperClassHandler()}>
         <DisplayHeader className={sectionIndex === 1 && 'show'}>
           {['D', 'I', 'S', 'P', 'L', 'A', 'Y'].map((letter) => (
@@ -89,18 +93,55 @@ const CanvasAndHeadersWrapper = styled.div`
     box-shadow: 0px 0px 50px 10px #e2e2e2;
     transition: 2s 0.5s ease;
     width: 50.1%;
+    @media screen and (max-width: 680px) {
+      background: ${({ theme }) => theme.colors.black};
+    }
   }
   &.camera {
     box-shadow: 0px 0px 50px 10px #e2e2e2;
     transition: 2s 0.5s ease;
     width: 100%;
-    height: 80%;
+    height: 65%;
+    @media screen and (max-width: 680px) {
+      height: 100%;
+      width: 50.1%;
+      background: ${({ theme }) => theme.colors.black};
+    }
   }
   &.battery {
     box-shadow: 0px 0px 50px 10px #e2e2e2;
     transition: 2s 0.5s ease;
     width: 100%;
     height: 30%;
+    @media screen and (max-width: 680px) {
+      height: 40%;
+      background: ${({ theme }) => theme.colors.black};
+      color: white;
+    }
+  }
+`;
+
+const HomeHeader = styled.div`
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  width: 30%;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 1s ease;
+  top: 100px;
+  font-size: 200px;
+  @media screen and (max-width: 1000px) {
+    width: 85%;
+  }
+  &.show {
+    top: 50%;
+    opacity: 1;
+    transition: 1s 2s ease;
   }
 `;
 
@@ -111,26 +152,25 @@ const DisplayHeader = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-  transform: translate(0, -50%);
+  transform: translate(-50%, -50%);
   opacity: 0;
   font-weight: bold;
   writing-mode: vertical-lr;
   top: 100%;
-  letter-spacing: 20px;
   transition: 1s ease;
-  right: 300px;
-  font-size: 250px;
-  &.camera {
-    writing-mode: unset;
-    top: unset;
-    bottom: 400px;
-    right: unset;
-    background: red;
-    height: auto;
-    opacity: 1;
+  left: 50%;
+  font-size: 200px;
+  @media screen and (max-width: 1380px) {
+    font-size: 150px;
     left: 50%;
-    transform: translate(-50%);
-    transition: 1s 2s ease;
+  }
+  @media screen and (max-width: 1000px) {
+    left: 0%;
+    transform: translate(0%, -50%);
+  }
+  @media screen and (max-width: 680px) {
+    z-index: 2;
+    color: white;
   }
   &.show {
     top: 50%;
@@ -145,18 +185,26 @@ const CameraHeader = styled.div`
   opacity: 0;
   width: 100%;
   font-weight: bold;
-  transform: translate(-50%);
-  bottom: 100px;
+  transform: translate(-50%, -50%);
+  top: 100px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  letter-spacing: 20px;
   transition: 1s ease;
   bottom: 100px;
-  font-size: 400px;
+  font-size: 200px;
+  @media screen and (max-width: 1000px) {
+    font-size: 100px;
+  }
+  @media screen and (max-width: 680px) {
+    z-index: 2;
+    color: ${({ theme }) => theme.colors.black};
+    writing-mode: vertical-rl;
+    height: 100%;
+    left: 150%;
+  }
   &.show {
-    top: unset;
-    bottom: 400px;
+    top: 50%;
     opacity: 1;
     transition: 1s 2s ease;
   }
@@ -168,17 +216,23 @@ const BatteryHeader = styled.div`
   opacity: 0;
   font-weight: bold;
   display: flex;
-  transform: translate(-50%);
-  bottom: 100px;
-  letter-spacing: 20px;
+  align-items: center;
+  justify-content: space-around;
+  transform: translate(-50%, -50%);
+  top: 100px;
   transition: 1s ease;
-  font-size: 400px;
-  bottom: 100px;
+  font-size: 200px;
+  width: 100%;
+  @media screen and (max-width: 1000px) {
+    font-size: 100px;
+  }
+  @media screen and (max-width: 680px) {
+    font-size: 65px;
+  }
   &.show {
-    top: unset;
-    bottom: -50px;
+    top: 50%;
     opacity: 1;
-    transition: 1s 2s ease;
+    transition: 1s 1s ease;
   }
 `;
 

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const Wrapper = styled(motion.div)`
   width: 100%;
   max-width: 1920px;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -15,21 +15,16 @@ export const Wrapper = styled(motion.div)`
 
 export const Letter = styled(motion.h4)`
   color: ${({ theme }) => theme.colors.black};
-  font-size: 150px;
   text-transform: uppercase;
-  margin: 0 20px;
-  @media screen and (max-width: 520px) {
-    font-size: 80px;
-    margin: 0 5px;
-  }
+  font-size: 400px;
+  line-height: 300px;
 `;
 
 export const Part = styled(motion.div)`
   display: flex;
-  width: auto;
-  min-width: 20%;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-evenly;
-  @media screen and (max-width: 520px) {
-  }
+  align-items: center;
+  width: 20%;
+  height: 100%;
 `;

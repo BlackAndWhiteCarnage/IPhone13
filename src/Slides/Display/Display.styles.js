@@ -6,7 +6,7 @@ export const Wrapper = styled.article`
   width: 14%;
   right: 0;
   top: 0;
-  height: 2000px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
