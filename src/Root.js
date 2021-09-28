@@ -32,11 +32,11 @@ function Root() {
         threeState.cameraPos = new THREE.Vector3(0, 1, 0);
         threeState.target = new THREE.Vector3(0, 1, 0);
         setTimeout(() => {
-          threeState.cameraPos = new THREE.Vector3(0, 0, -1);
+          threeState.cameraPos = new THREE.Vector3(0, 0, -0.85);
           threeState.target = new THREE.Vector3(0, 0, 0);
         }, 500);
       } else {
-        threeState.cameraPos = new THREE.Vector3(0, 0, -1);
+        threeState.cameraPos = new THREE.Vector3(0, 0, -0.85);
         threeState.target = new THREE.Vector3(0, 0, 0);
       }
     } else if (sectionIndex === 2) {
@@ -61,8 +61,8 @@ function Root() {
   return (
     <>
       <GlobalStyle />
-      <CanvasWrapper sectionIndex={sectionIndex} />
-      {/* <AllSlides setSectionIndex={setSectionIndex} sectionIndex={sectionIndex} /> */}
+      <CanvasWrapper sectionIndex={sectionIndex} prevIndex={prevIndex} />
+      {/* <AllSlides setSectionIndex={setSectionIndex}  /> */}
       <SectionsWrapper>
         <Home setSectionIndex={setSectionIndex} />
         <Display setSectionIndex={setSectionIndex} />

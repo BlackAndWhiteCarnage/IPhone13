@@ -9,16 +9,7 @@ const Camera = ({ setSectionIndex }) => {
 
   return (
     <SectionWrapper setSectionIndex={setSectionIndex} index={2}>
-      <Wrapper variants={templateAnim} animate={controls} initial='hidden' ref={element}>
-        <Part className='right'>
-          <Letter variants={letterAnim}>c</Letter>
-          <Letter variants={letterAnim}>a</Letter>
-          <Letter variants={letterAnim}>m</Letter>
-          <Letter variants={letterAnim}>e</Letter>
-          <Letter variants={letterAnim}>r</Letter>
-          <Letter variants={letterAnim}>a</Letter>
-        </Part>
-      </Wrapper>
+      <Wrapper variants={templateAnim} animate={controls} initial='hidden' ref={element}></Wrapper>
     </SectionWrapper>
   );
 };

@@ -4,7 +4,7 @@ import Display from './Display/Display';
 import Camera from './Camera/Camera';
 import Battery from './Battery/Battery';
 
-const AllSlides = ({ setSectionIndex, sectionIndex }) => {
+const AllSlides = ({ setSectionIndex }) => {
   const slides: ISlideConfig[] = [
     {
       content: <Home setSectionIndex={setSectionIndex} />,

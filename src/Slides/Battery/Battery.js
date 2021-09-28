@@ -10,7 +10,7 @@ const Battery = ({ setSectionIndex }) => {
   return (
     <SectionWrapper setSectionIndex={setSectionIndex} index={3}>
       <Wrapper variants={templateAnim} animate={controls} initial='hidden' ref={element}>
-        <Part className='right'>
+        {/* <Part className='right'>
           <Letter variants={letterAnim}>b</Letter>
           <Letter variants={letterAnim}>a</Letter>
           <Letter variants={letterAnim}>t</Letter>
@@ -18,7 +18,7 @@ const Battery = ({ setSectionIndex }) => {
           <Letter variants={letterAnim}>e</Letter>
           <Letter variants={letterAnim}>r</Letter>
           <Letter variants={letterAnim}>y</Letter>
-        </Part>
+        </Part> */}
       </Wrapper>
     </SectionWrapper>
   );
