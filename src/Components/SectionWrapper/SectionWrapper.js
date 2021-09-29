@@ -1,19 +1,9 @@
 import React, { useEffect } from 'react';
-import styled from 'styled-components';
 import { useInView } from 'react-intersection-observer';
-
-const Wrapper = styled.section`
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+import { Wrapper } from './SectionWrapper.styles';
 
 const SectionWrapper = ({ children, setSectionIndex, index, className }) => {
-  const [elem, view] = useInView({ threshold: 0.2 });
+  const [elem, view] = useInView({ threshold: 0.5 });
 
   useEffect(() => {
     if (view) {
