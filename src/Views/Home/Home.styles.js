@@ -70,6 +70,9 @@ export const ImageWrapper = styled.div`
   &.white {
     background: #fbfbfd;
   }
+  &.pureWhite {
+    background: #ffffff;
+  }
   &.bottom {
     img {
       max-height: 900px;
@@ -115,7 +118,7 @@ export const Image = styled.img`
   }
 `;
 
-export const ColorsWrapper = styled.div`
+export const InfoWrapper = styled.div`
   position: absolute;
   bottom: 50px;
   left: 50%;
@@ -148,6 +151,7 @@ export const Color = styled.div`
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid #fbfbfd;
+  transition: 1s ease;
   &.blue {
     background: #98b2ca;
   }
@@ -162,6 +166,7 @@ export const Color = styled.div`
   }
   &.active {
     border: 2px solid #0d93de;
+    transition: 1s ease;
   }
 `;
 
@@ -174,7 +179,7 @@ export const ColorNamesWrapper = styled.div`
   justify-content: space-evenly;
 `;
 
-export const ColorName = styled.div`
+export const Info = styled.div`
   font-size: ${({ theme }) => theme.fontSize.m};
   opacity: 0.25;
   transition: 1s ease;
