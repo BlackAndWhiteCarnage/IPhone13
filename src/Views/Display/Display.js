@@ -2,8 +2,10 @@ import React from 'react';
 // COMPONENTS
 import ContentSection from 'Components/ContentSection/ContentSection';
 import SectionWrapper from 'Components/SectionWrapper/SectionWrapper';
+import DisplayInfo from 'Components/DisplayInfo/DisplayInfo';
 // IMAGES
 import iphoneDisplay from 'Assets/Images/IphoneImages/iphoneDisplay.jpg';
+import iphoneDisplay2 from 'Assets/Images/IphoneImages/iphoneDisplay2.jpg';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -14,8 +16,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 200px;
   @media screen and (max-width: 1000px) {
-    /* padding: 200px 0; */
     min-width: unset;
   }
 `;
@@ -28,66 +30,67 @@ const IphoneImage = styled.img`
   }
 `;
 
-const InfoWrapper = styled.div`
-  width: 60%;
-  height: auto;
+const ProMotionWrapper = styled.div`
+  width: 100vw;
+  height: 1600px;
+  padding-top: 200px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+  background: #fbfbfd;
+`;
+
+const ProMotionHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  z-index: 1;
+  width: 50%;
+  margin-bottom: 100px;
+  strong {
+    font-size: ${({ theme }) => theme.fontSize.xxl};
+    @media screen and (max-width: 680px) {
+      font-size: ${({ theme }) => theme.fontSize.xl};
+    }
+  }
+  span {
+    font-size: ${({ theme }) => theme.fontSize.xl};
+    @media screen and (max-width: 680px) {
+      font-size: ${({ theme }) => theme.fontSize.l};
+    }
+  }
+  @media screen and (max-width: 1366px) {
+    width: 80%;
+    margin-bottom: 0;
+  }
+`;
+
+const ProMotionText = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
   flex-wrap: wrap;
-  @media screen and (max-width: 1000px) {
-    flex-direction: column;
+  height: 350px;
+  @media screen and (max-width: 1366px) {
+    width: 80%;
+  }
+`;
+
+const Part = styled.article`
+  width: 45%;
+  font-size: ${({ theme }) => theme.fontSize.m};
+  @media screen and (max-width: 1366px) {
     width: 100%;
   }
 `;
 
-const Info = styled.div`
-  min-height: 300px;
-  border: 1px solid #bdbdbe;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 40px;
-  @media screen and (max-width: 1000px) {
-    width: 100% !important;
-    border-left: none !important;
-    border-right: none !important;
-  }
-  @media screen and (max-width: 680px) {
-    padding: 40px 20px;
-    min-height: 400px;
-  }
-  &.bigger {
-    width: 60%;
-  }
-  &.smaller {
-    width: 40%;
-  }
-  &.left {
-    text-align: left;
-    border-left: none;
-  }
-  &.right {
-    border-right: none;
-    text-align: right;
-  }
-`;
-
-const Text = styled.span`
-  width: 100%;
-  &.s {
-    color: #bdbdbe;
-    font-size: ${({ theme }) => theme.fontSize.m};
-  }
-  &.m {
-    font-size: ${({ theme }) => theme.fontSize.xl};
-    @media screen and (max-width: 1000px) {
-      /* font-size: ${({ theme }) => theme.fontSize.l}; */
-    }
-  }
-  &.xl {
-    font-size: ${({ theme }) => theme.fontSize.xxl};
-    @media screen and (max-width: 1000px) {
-      /* font-size: ${({ theme }) => theme.fontSize.xl}; */
-    }
+const ProMotionImage = styled.img`
+  width: 1200px;
+  @media screen and (max-width: 1366px) {
+    width: 100%;
   }
 `;
 
@@ -98,41 +101,26 @@ const Display = ({ setSectionIndex }) => {
       <ContentSection>
         <Wrapper>
           <IphoneImage src={iphoneDisplay} />
-          <InfoWrapper>
-            <Info className='bigger left'>
-              <Text className='s'>Up to</Text>
-              <Text className='xl'>
-                25% brighter <br /> outdoors
-              </Text>
-              <Text className='s'>for content that looks even more vivid in sunlight</Text>
-            </Info>
-            <Info className='smaller right'>
-              <Text className='m'>Custom OLED technology</Text>
-              <Text className='s'>pushes the display’s incredible resolution and color right to the edge</Text>
-            </Info>
-            <Info className='smaller left'>
-              <Text className='s'>Up to</Text>
-              <Text className='m'>1200 nits</Text>
-              <Text className='s'>peak brightness for your HDR photos and videos</Text>
-            </Info>
-            <Info className='bigger right'>
-              <Text className='xl'>
-                Even more <br /> display area
-              </Text>
-              <Text className='s'>thanks to a smaller TrueDepth camera system</Text>
-            </Info>
-            <Info className='bigger left'>
-              <Text className='xl'>
-                Incredible <br />
-                color fidelity
-              </Text>
-              <Text className='s'>makes all your content look true to life</Text>
-            </Info>
-            <Info className='smaller right'>
-              <Text className='m'>Striking contrast and resolution</Text>
-              <Text className='s'>creates true blacks, bright whites, sharp detail, and crisp text</Text>
-            </Info>
-          </InfoWrapper>
+          <DisplayInfo />
+          <ProMotionWrapper>
+            <ProMotionHeader>
+              <strong>Hello, ProMotion.</strong>
+              <br />
+              <span>
+                Meet the 120Hz adaptive refresh display
+                <br /> that changes the game.
+              </span>
+            </ProMotionHeader>
+            <ProMotionText>
+              <Part>
+                The new Super Retina XDR display with ProMotion can refresh from 10 to 120 times per second, and all kinds of frame rates in between.
+                It intelligently ramps up when you need exceptional graphics performance, and ramps down to save power when you don’t. It even
+                accelerates and decelerates naturally to match the speed of your finger as you scroll. You’ve never felt anything like it.
+              </Part>
+              <Part>iOS 15 is optimized for ProMotion, so the things you do every day feel phenomenally fluid</Part>
+            </ProMotionText>
+            <ProMotionImage src={iphoneDisplay2} />
+          </ProMotionWrapper>
         </Wrapper>
       </ContentSection>
     </>
