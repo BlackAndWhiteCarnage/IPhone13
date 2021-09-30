@@ -4,11 +4,13 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
+  min-height: 2000px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: ${({ theme }) => theme.colors.white};
   margin: 300px 0;
+  overflow: hidden;
   &:last-child {
     margin-bottom: 0;
   }

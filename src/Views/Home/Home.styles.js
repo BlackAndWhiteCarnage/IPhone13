@@ -181,10 +181,10 @@ export const ColorNamesWrapper = styled.div`
 
 export const Info = styled.div`
   font-size: ${({ theme }) => theme.fontSize.m};
-  opacity: 0.25;
+  color: #bdbdbe;
   transition: 1s ease;
   &.active {
-    opacity: 0.8;
+    color: ${({ theme }) => theme.colors.black};
     transition: 1s ease;
   }
   @media screen and (max-width: 1000px) {
