@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.h4`
   position: absolute;
   text-align: center;
   height: 100%;

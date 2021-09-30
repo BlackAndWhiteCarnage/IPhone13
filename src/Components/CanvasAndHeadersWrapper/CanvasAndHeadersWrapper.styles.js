@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   position: relative;
   height: 100%;
   width: 0%;
-  background: #fcfcfc;
+  background: ${({ theme }) => theme.colors.white};
   transition: 1s 0.5s ease;
   color: white;
   background: ${({ theme }) => theme.colors.black};

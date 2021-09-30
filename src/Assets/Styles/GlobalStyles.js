@@ -10,10 +10,10 @@ export const GlobalStyle = createGlobalStyle`
     }
     body{
         color: ${({ theme }) => theme.colors.black};
-        background: #F3F3F3;
+        background: ${({ theme }) => theme.colors.white};
     }
     ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
     background: #F3F3F3;
     }
     ::-webkit-scrollbar-thumb {
