@@ -14,10 +14,13 @@ const Wrapper = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
+  &.noMargin {
+    margin: 0;
+  }
 `;
 
-const ContentSection = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
+const ContentSection = ({ children, className }) => {
+  return <Wrapper className={className}>{children}</Wrapper>;
 };
 
 export default ContentSection;
