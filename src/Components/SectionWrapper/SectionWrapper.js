@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+// STYLES
 import { Wrapper } from './SectionWrapper.styles';
 
 const SectionWrapper = ({ children, setSectionIndex, index, className }) => {

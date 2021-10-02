@@ -9,19 +9,17 @@ import iphoneDisplay from 'Assets/Images/IphoneImages/iphoneDisplay.jpg';
 // STYLES
 import { Wrapper, IphoneImage } from './Display.styles';
 
-const Display = ({ setSectionIndex }) => {
-  return (
-    <>
-      <SectionWrapper setSectionIndex={setSectionIndex} index={1} />
-      <ContentSection>
-        <Wrapper>
-          <IphoneImage src={iphoneDisplay} />
-          <DisplayInfo />
-          <DisplayDescription />
-        </Wrapper>
-      </ContentSection>
-    </>
-  );
-};
+const Display = ({ setSectionIndex }) => (
+  <>
+    <SectionWrapper setSectionIndex={setSectionIndex} index={1} />
+    <ContentSection>
+      <Wrapper>
+        <IphoneImage src={iphoneDisplay} />
+        <DisplayInfo />
+        <DisplayDescription />
+      </Wrapper>
+    </ContentSection>
+  </>
+);
 
 export default Display;

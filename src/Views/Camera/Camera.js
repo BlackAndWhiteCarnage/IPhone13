@@ -8,19 +8,17 @@ import CameraImages from 'Components/CameraImages/CameraImages';
 // STYLES
 import { Wrapper } from './Camera.styles';
 
-const Camera = ({ setSectionIndex }) => {
-  return (
-    <>
-      <SectionWrapper setSectionIndex={setSectionIndex} index={2} />
-      <CameraHeroImage />
-      <ContentSection className='noMargin'>
-        <Wrapper>
-          <CameraDescription />
-          <CameraImages />
-        </Wrapper>
-      </ContentSection>
-    </>
-  );
-};
+const Camera = ({ setSectionIndex }) => (
+  <>
+    <SectionWrapper setSectionIndex={setSectionIndex} index={2} />
+    <CameraHeroImage />
+    <ContentSection className='noMargin'>
+      <Wrapper>
+        <CameraDescription />
+        <CameraImages />
+      </Wrapper>
+    </ContentSection>
+  </>
+);
 
 export default Camera;

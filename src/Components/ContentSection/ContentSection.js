@@ -17,13 +17,12 @@ const Wrapper = styled.div`
   &.noMargin {
     margin: 0;
   }
-  &.smaller {
+  &.battery {
     min-height: 1400px;
+    background: #fbfbfd;
   }
 `;
 
-const ContentSection = ({ children, className }) => {
-  return <Wrapper className={className}>{children}</Wrapper>;
-};
+const ContentSection = ({ children, className }) => <Wrapper className={className}>{children}</Wrapper>;
 
 export default ContentSection;

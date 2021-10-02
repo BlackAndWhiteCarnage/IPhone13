@@ -1,9 +1,7 @@
-const Light = (props) => {
-  return (
-    <mesh {...props}>
-      <pointLight castShadow />
-    </mesh>
-  );
-};
+const Light = (props) => (
+  <mesh {...props}>
+    <pointLight castShadow />
+  </mesh>
+);
 
 export default Light;

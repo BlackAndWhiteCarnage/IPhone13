@@ -6,16 +6,14 @@ import iphoneCameraImage3 from 'Assets/Images/IphoneImages/iphoneCameraImage3.jp
 // STYLES
 import { Wrapper, Image, ImagesWrapper } from './CameraImages.styles';
 
-const CameraImages = () => {
-  return (
-    <Wrapper>
-      <ImagesWrapper>
-        <Image src={iphoneCameraImage1} className='leftTop' />
-        <Image src={iphoneCameraImage2} className='centerRight' />
-        <Image src={iphoneCameraImage3} className='leftBottom' />
-      </ImagesWrapper>
-    </Wrapper>
-  );
-};
+const CameraImages = () => (
+  <Wrapper>
+    <ImagesWrapper>
+      <Image src={iphoneCameraImage1} className='leftTop' />
+      <Image src={iphoneCameraImage2} className='centerRight' />
+      <Image src={iphoneCameraImage3} className='leftBottom' />
+    </ImagesWrapper>
+  </Wrapper>
+);
 
 export default CameraImages;

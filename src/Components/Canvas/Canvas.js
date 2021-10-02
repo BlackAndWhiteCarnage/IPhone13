@@ -19,26 +19,24 @@ import { Wrapper, StyledCanvas } from './Canvas.styles';
 
 extend({ OrbitControls });
 
-const CanvasWrapper = ({ sectionIndex }) => {
-  return (
-    <Wrapper>
-      <HomeHeader sectionIndex={sectionIndex} />
-      <CanvasAndHeadersWrapper sectionIndex={sectionIndex}>
-        <DisplayHeader sectionIndex={sectionIndex} />
-        <CameraHeader sectionIndex={sectionIndex} />
-        <BatteryHeader sectionIndex={sectionIndex} />
-        <BatteryHeader className={sectionIndex === 3 && 'show'}></BatteryHeader>
-        <StyledCanvas camera={{ position: threeState.cameraPos }}>
-          <Suspense fallback={null}>
-            <IphoneModel path='/13/scene.gltf' />
-          </Suspense>
-          <AllLights />
-          <Orbit />
-          <CameraControls />
-        </StyledCanvas>
-      </CanvasAndHeadersWrapper>
-    </Wrapper>
-  );
-};
+const CanvasWrapper = ({ sectionIndex }) => (
+  <Wrapper>
+    <HomeHeader sectionIndex={sectionIndex} />
+    <CanvasAndHeadersWrapper sectionIndex={sectionIndex}>
+      <DisplayHeader sectionIndex={sectionIndex} />
+      <CameraHeader sectionIndex={sectionIndex} />
+      <BatteryHeader sectionIndex={sectionIndex} />
+      <BatteryHeader className={sectionIndex === 3 && 'show'}></BatteryHeader>
+      <StyledCanvas camera={{ position: threeState.cameraPos }}>
+        <Suspense fallback={null}>
+          <IphoneModel path='/13/scene.gltf' />
+        </Suspense>
+        <AllLights />
+        <Orbit />
+        <CameraControls />
+      </StyledCanvas>
+    </CanvasAndHeadersWrapper>
+  </Wrapper>
+);
 
 export default CanvasWrapper;
