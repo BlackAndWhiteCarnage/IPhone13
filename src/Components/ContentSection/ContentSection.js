@@ -17,6 +17,9 @@ const Wrapper = styled.div`
   &.noMargin {
     margin: 0;
   }
+  &.smaller {
+    min-height: 1400px;
+  }
 `;
 
 const ContentSection = ({ children, className }) => {
