@@ -47,6 +47,25 @@ It's a simple website for an IPhone 13, once I was learning react-three-fiber an
 
 <br />
 
+## Quick Preview
+
+### Home Page
+<img src="./readmeImages/1.png" alt="Home Page" width='100%'/>
+
+### Home Page Description
+<img src="./readmeImages/2.png" alt="Home Page Description" width='100%'/>
+
+### Display
+<img src="./readmeImages/3.png" alt="Display" width='100%'/>
+
+### Camera
+<img src="./readmeImages/4.png" alt="Camera" width='100%'/>
+
+### Battery
+<img src="./readmeImages/4.png" alt="Battery" width='100%'/>
+
+<br />
+
 ## Author
 
 - [@BlackAndWhiteCarnage](https://github.com/BlackAndWhiteCarnage)
