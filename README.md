@@ -62,7 +62,7 @@ It's a simple website for an IPhone 13, once I was learning react-three-fiber an
 <img src="./readmeImages/4.png" alt="Camera" width='100%'/>
 
 ### Battery
-<img src="./readmeImages/4.png" alt="Battery" width='100%'/>
+<img src="./readmeImages/5.png" alt="Battery" width='100%'/>
 
 <br />
 
