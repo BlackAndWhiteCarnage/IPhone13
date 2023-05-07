@@ -1,3 +1,5 @@
+<img src="https://user-images.githubusercontent.com/71930296/236704253-113ef90e-3efb-471d-85ca-856acfac87ab.svg" alt="" width='100%'/>
+
 # IPhone 13 - Landing Page 📱
 
 https://friendly-carson-a22302.netlify.app/
