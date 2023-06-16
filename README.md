@@ -1,4 +1,7 @@
-<img src="https://user-images.githubusercontent.com/71930296/236704253-113ef90e-3efb-471d-85ca-856acfac87ab.svg" alt="" width='100%'/>
+<img src="https://github.com/BlackAndWhiteCarnage/IPhone13/assets/71930296/7062894d-144f-4991-b537-193c0c32023a" alt="" width='100%'/>
+
+<br />
+<br />
 
 # IPhone 13 - Landing Page 📱
 
